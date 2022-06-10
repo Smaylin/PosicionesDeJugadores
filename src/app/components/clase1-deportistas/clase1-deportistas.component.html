@@ -1,0 +1,21 @@
+
+
+
+<h1>Hola Jugadores!</h1>
+
+<button (click)="saludar()">Saludar</button>
+<div class="container">
+
+    <div class="card" *ngFor="let deportes of deportistas ">
+        <h3> {{deportes.nombre}} posicion: {{deportes.posicion}}</h3>
+        <div class="img"> <img src="../../../assets/img/10.webp" alt=""></div>
+
+            <p> <span>Nombre</span>  {{deportes.nombre}}</p>
+            <p> <span>Apellido:</span> {{deportes.apellido}}</p>
+            <p> <span>Edad:</span>     {{deportes.edad}}</p>
+            <p> <span>Deporte:</span>  {{deportes.deporte}}</p>
+            <p> <span>Posicion:</span> {{deportes.posicion}}</p>
+            <p> <span>Dorsal:</span>   {{deportes.dorsal}}</p>
+        <input type="text"  [(ngModel)]="deportes.posicion">
+    </div>
+</div>
